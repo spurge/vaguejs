@@ -7,7 +7,7 @@ const generators: Array<[number, () => string|number|boolean]> = [
   [25, () => `"${clean()}"`],
   [20, () => numbers()],
   [20, () => booleans()],
-  [10, () => jsonString()],
+  [10, () => json()],
   [10, () => arrayString()],
   [5, () => `"${strings()}"`]
 ]
@@ -38,15 +38,11 @@ function arrayString () {
   return `[${elements.join(',')}]`
 }
 
-export function jsonString () {
+export default function json () {
   const elements = range(random(1, 20))
     .map(() => {
       return `"${clean()}":${content()}`
     })
 
   return `{${elements.join(',')}}`
-}
-
-export default function json () {
-  return JSON.parse(jsonString())
 }

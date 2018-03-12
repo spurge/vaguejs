@@ -4,6 +4,6 @@ describe('json', () => {
   it('should return randomized json with default options', () => {
     const val = json()
 
-    console.log(val)
+
   })
 })
