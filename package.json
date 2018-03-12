@@ -1,11 +1,18 @@
 {
-  "name": "vaguejs",
+  "name": "vague",
   "version": "0.1.0",
   "description": "Vaguejs is a library for creating data for fuzzy tests",
-  "main": "index.js",
+  "main": "dist",
+  "typings": "dist",
   "scripts": {
+    "build": "tsc",
+    "clean": "rm -Rf dist",
+    "prepublishOnly": "npm run clean && npm run build",
     "test": "mocha -r ts-node/register src/**/*.spec.ts"
   },
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/spurge/vaguejs.git"
