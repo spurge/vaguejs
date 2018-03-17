@@ -1,17 +1,17 @@
 import {random, range} from 'lodash'
 
-type rangeTuple = [number, number]
+type RangeTuple = [number, number]
 
-const allRange: rangeTuple = [0, 65535]
-const latinRange: rangeTuple = [32, 255]
+const allRange: RangeTuple = [0, 65535]
+const latinRange: RangeTuple = [32, 255]
 
-function charByRange (charRange: rangeTuple): string {
+function charByRange (charRange: RangeTuple): string {
   return String.fromCharCode(random.apply(null, charRange))
 }
 
 function strings (
   length: number = random(1, 100),
-  charRange: rangeTuple = allRange
+  charRange: RangeTuple = allRange
 ): string {
   return range(length)
     .map(() => charByRange(charRange))

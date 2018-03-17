@@ -4,7 +4,7 @@ import strings, {latin} from './strings'
 function expectRange (charCode: number, start: number, end: number): void {
   if (
     !isNaN(charCode) &&
-    (charCode <= start || charCode >= end)
+    (charCode < start || charCode > end)
 ) {
     expect.fail('Charcode out of range')
   }
