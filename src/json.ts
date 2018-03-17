@@ -31,14 +31,14 @@ function content (): string|number|boolean {
     [0][1]()
 }
 
-function arrayString () {
+function arrayString (): string {
   const elements = range(random(1, 20))
     .map(content)
 
   return `[${elements.join(',')}]`
 }
 
-export default function json () {
+export default function json (): string {
   const elements = range(random(1, 20))
     .map(() => {
       return `"${clean()}":${content()}`
