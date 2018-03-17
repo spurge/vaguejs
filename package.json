@@ -8,7 +8,8 @@
     "build": "tsc",
     "clean": "rm -Rf dist",
     "prepublishOnly": "npm run clean && npm run build",
-    "test": "mocha -r ts-node/register src/**/*.spec.ts"
+    "test": "mocha -r ts-node/register src/**/*.spec.ts",
+    "watch": "mocha --watch -r ts-node/register src/**/*.spec.ts"
   },
   "files": [
     "dist"
