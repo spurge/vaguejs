@@ -18,9 +18,9 @@ describe('numbers', () => {
   })
 
   it('should return random float', () => {
-    const num = numbers(null, true)
+    const num = numbers(undefined, true)
 
     expect(num).to.be.a('number')
-    expect(num.toString()).to.match(/^[0-9]+\.[0-9]+$/)
+    expect(num.toString()).to.match(/^[0-9]+(\.[0-9]+)?$/)
   })
 })
