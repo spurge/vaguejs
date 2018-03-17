@@ -18,9 +18,11 @@ function strings (
     .join('')
 }
 
-export default function everything (length?: number): string {
+export function everything (length?: number): string {
   return strings(length, allRange)
 }
+
+export default everything
 
 export function latin (length?: number): string {
   return strings(length, latinRange)
