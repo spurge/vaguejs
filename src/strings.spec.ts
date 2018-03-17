@@ -15,11 +15,17 @@ describe('strings', () => {
     it('should return random string by default length', () => {
       const str1 = strings()
       const str2 = strings()
+      const str3 = strings()
 
       expect(str1).to.be.a('string')
       expect(str2).to.be.a('string')
+      expect(str3).to.be.a('string')
+
       expect(str1).to.not.equal(str2)
-      expect(str1.length).to.not.equal(str2.length)
+      expect(str1).to.not.equal(str3)
+      expect(str2).to.not.equal(str3)
+      expect(str1.length)
+        .to.satisfy((length: number) => length !== str2.length || length !== str3.length)
     })
 
     it('should return random string by length', () => {
