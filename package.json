@@ -20,6 +20,10 @@
       "**/*.spec.ts",
       "**/*.js"
     ],
+    "reporter": [
+      "lcov",
+      "text-summary"
+    ],
     "all": true
   },
   "files": [
